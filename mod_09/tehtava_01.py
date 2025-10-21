@@ -1,7 +1,4 @@
-class Auto():
-    def __init__(self, rekisteritunnus, huippunopeus):
-        self.rekisteritunnus = rekisteritunnus
-        self.huippunopeus = huippunopeus
+from auto import Auto
 
 auto = Auto("ABC-123", 142)
 
