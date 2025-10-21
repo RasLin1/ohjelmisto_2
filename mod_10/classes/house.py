@@ -1,4 +1,4 @@
-from elevator import Elevator
+from .elevator import Elevator
 
 class House():
     existing_elevators = 0
