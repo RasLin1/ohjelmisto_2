@@ -1,8 +1,9 @@
 class Auto():
-    pass
+    def __init__(self, rekisteritunnus, huippunopeus):
+        self.rekisteritunnus = rekisteritunnus
+        self.huippunopeus = huippunopeus
 
-auto = Auto()
-auto.rekisteritunnus = "ABC-123"
-auto.huippunopeus = 142
+auto = Auto("ABC-123", 142)
+
 
 print (f"Auton rekisteritunnus on: {auto.rekisteritunnus} ja huippunopeus oli: {auto.huippunopeus} km/h")
