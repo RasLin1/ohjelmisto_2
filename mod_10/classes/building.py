@@ -12,13 +12,16 @@ class Building():
         self.highest_floor = highest_floor
         self.elevators = temp_elevators_holder
 
-    def move_elevator(self, elevator_number, new_floor):
-        allow_movement = True
-        while self.elevators[elevator_number - 1].current_floor != new_floor and allow_movement:
-            if self.elevators[elevator_number - 1].current_floor > new_floor and self.elevators[elevator_number - 1].current_floor >= self.lowest_floor + 1:
-                self.elevators[elevator_number - 1].elevator_down()
-            elif self.elevators[elevator_number - 1].current_floor < new_floor and self.elevators[elevator_number - 1].current_floor <= self.highest_floor - 1:
-                self.elevators[elevator_number - 1].elevator_up()
-            else:
-                print("ERROR: couldn't move the elevator")
-                allow_movement = False
+    def move_building_elevator(self, elevator_number, new_floor):
+        if self.elevators[elevator_number - 1].current_floor > new_floor:
+            self.elevators[elevator_number - 1].elevator_down(new_floor)
+        elif self.elevators[elevator_number - 1].current_floor < new_floor:
+            self.elevators[elevator_number - 1].elevator_up(new_floor)
+        else:
+            print("ERROR: couldn't move the elevator")
+    
+    def fire_alarm(self):
+        print("Palohälyytys!!!")
+        print("Kaikki hissit pohjakerokkseen!!!")
+        for x in range(Building.existing_elevators):
+            self.elevators[x].elevator_down(self.lowest_floor)
