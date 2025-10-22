@@ -1,7 +1,5 @@
 import random
 
-
-
 class Kilpailu():
     leading_distance = 0
     leading_reg = 0
@@ -22,6 +20,9 @@ class Kilpailu():
     def tulosta_tilanne(self):
         for auto in self.autot:
             print(f"{auto.rekisteritunnus} | {auto.kuljettu_matka} km | {auto.nopeus} km/h")
+            print("")
+        print("-------------------------------------------------")
+        print("")
         
     def kilpailu_ohi(self):
         for auto in self.autot:

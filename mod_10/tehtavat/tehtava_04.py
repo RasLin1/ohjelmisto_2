@@ -12,7 +12,7 @@ while counter < auto_amount:
     autot.append(auto)
     counter = counter + 1
 
-k = Kilpailu("Suuri romuralli", 4000, autot)
+k = Kilpailu("Suuri romuralli", 8000, autot)
 
 while allow_race:
     for x in range(10):
