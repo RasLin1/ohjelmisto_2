@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 from .elevator import Elevator
+=======
+from mod_10.classes.elevator import Elevator
+>>>>>>> 055629f993c96d6bbdd0fe92507fb6cee6e3a844
 
 class Building():
     existing_elevators = 0
@@ -11,6 +15,7 @@ class Building():
         self.lowest_floor = lowest_floor
         self.highest_floor = highest_floor
         self.elevators = temp_elevators_holder
+<<<<<<< HEAD
     
     def move_elevator(self, elevator_number, new_floor):
         allow_movement = True
@@ -22,3 +27,19 @@ class Building():
             else:
                 allow_movement = False
                 print("Annettu kerros ei sovi yhteen talon kanssa")
+=======
+
+    def move_building_elevator(self, elevator_number, new_floor):
+        if self.elevators[elevator_number - 1].current_floor > new_floor:
+            self.elevators[elevator_number - 1].elevator_down(new_floor)
+        elif self.elevators[elevator_number - 1].current_floor < new_floor:
+            self.elevators[elevator_number - 1].elevator_up(new_floor)
+        else:
+            print("ERROR: couldn't move the elevator")
+    
+    def fire_alarm(self):
+        print("Palohälyytys!!!")
+        print("Kaikki hissit pohjakerokkseen!!!")
+        for x in range(Building.existing_elevators):
+            self.elevators[x].elevator_down(self.lowest_floor)
+>>>>>>> 055629f993c96d6bbdd0fe92507fb6cee6e3a844
