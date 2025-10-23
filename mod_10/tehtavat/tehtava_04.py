@@ -17,7 +17,7 @@ k = Kilpailu("Suuri romuralli", 8000, autot)
 while allow_race:
     for x in range(10):
         k.tunti_kuluu()
-        allow_race = k.kilpailu_ohi()
+        race_won = k.kilpailu_ohi()
     k.tulosta_tilanne()
 
 if allow_race == False:
