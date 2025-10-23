@@ -1,4 +1,4 @@
-from mod_11.classes.julkaisu import Julkaisu, Kirja, Lehti
+from mod_11.classes.julkaisu import Kirja, Lehti
 
 julkaisut = []
 
