@@ -27,6 +27,4 @@ class Kilpailu():
     def kilpailu_ohi(self):
         for auto in self.autot:
             if auto.kuljettu_matka > self.distance:
-                return False
-            else:
                 return True

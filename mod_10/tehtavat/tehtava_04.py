@@ -18,6 +18,9 @@ while allow_race:
     for x in range(10):
         k.tunti_kuluu()
         race_won = k.kilpailu_ohi()
+        if race_won == True:
+            allow_race = False
+            break
     k.tulosta_tilanne()
 
 if allow_race == False:
