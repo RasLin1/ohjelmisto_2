@@ -7,7 +7,7 @@ class Auto():
         print("Auto created")
     
     def kiihdyta(self, kiihdytys):
-        self.nopeus = self.nopeus + kiihdytys
+        self.nopeus += kiihdytys
         if self.nopeus > self.huippunopeus:
             self.nopeus = self.huippunopeus
         elif self.nopeus < 0:
@@ -15,4 +15,4 @@ class Auto():
         
     
     def kulje(self, aika):
-        self.kuljettu_matka = self.kuljettu_matka + (self.nopeus * aika)
+        self.kuljettu_matka += self.nopeus * aika

@@ -10,7 +10,7 @@ autot = []
 while counter < auto_amount:
     auto = Auto(f"ABC-{counter + 1}", random.randint(100, 200))
     autot.append(auto)
-    counter = counter + 1
+    counter += 1
 
 k = Kilpailu("Suuri romuralli", 8000, autot)
 
@@ -24,6 +24,5 @@ while allow_race:
     k.tulosta_tilanne()
 
 if allow_race == False:
-    k.tulosta_tilanne()
     print(f"{Kilpailu.leading_reg} voitti | kulki {Kilpailu.leading_distance} km")
 
