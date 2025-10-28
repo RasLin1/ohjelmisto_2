@@ -13,7 +13,6 @@ class Auto():
         elif self.nopeus < 0:
             self.nopeus = 0
         
-    
     def kulje(self, aika):
         self.kuljettu_matka += (self.nopeus * aika)
 
