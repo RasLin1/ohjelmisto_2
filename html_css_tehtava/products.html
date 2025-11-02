@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>HTML ja CSS tehtävä</title>
+    <meta charset="UTF-8">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="includes/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+<div class="container" id="main-container">
+    <nav class="navbar navbar-expand-lg">
+        <div class="container" id="nav">
+            <!-- Branding -->
+            <a class="navbar-brand" href="#">
+                <img src="img/banana_company_flag.png" alt="Flag of chiquita predesessor" style="max-height: 50px;">
+            </a>
+
+            <!-- Toggler Button for Mobile -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon navbar-dark"></span>
+            </button>
+
+            <!-- Navbar Links -->
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="products.html">Products</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="contact.html">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="row">
+            <h1>Products</h1>
+        </div>
+        <div class="row">
+            <img src="img/many_banana.jpg" alt="Here comes a site hero">
+        </div>
+        <div class="row">
+            <p style="padding: 15px 24px 5px 24px;">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas quis eleifend elit, eu scelerisque ligula. Aenean vestibulum vestibulum augue, sed tempor mauris pretium id. Nunc ut dui neque. Quisque accumsan sodales aliquam. Fusce sit amet lectus enim. Ut venenatis risus vel ultrices aliquet. Aenean dignissim malesuada ex, ac tempus nisi aliquam eget. Cras aliquet sapien nec sapien vestibulum molestie. Fusce efficitur justo eros, faucibus feugiat ex commodo et. Vestibulum vitae faucibus ligula. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Phasellus pellentesque ex in tellus posuere, vel tincidunt velit porttitor. Nulla ornare, ex ut placerat tristique, turpis velit convallis mi, vitae tristique sapien nulla at dui. Phasellus in ante at augue fermentum consequat.
+            </p>
+        </div>
+        <div class="row">
+            <div class="col-4">
+                <div class="card book-card flex-fill" style="height: 800px; overflow: hidden;">
+                    <h5 class="card-title mb-0">Product 1</h5>
+                    <!-- Background Image Section -->
+                    <figure class="card-image" style="background-image: url(img/banana); background-size: cover; background-position: center; height: 80%; position: relative; margin: 0px 24px;">
+                        <figcaption>Product 1</figcaption>
+                    </figure>
+                    
+                    <!-- Button Section -->
+                    <div class="card-footer d-flex justify-content-center align-items-center" style="height: 20%;">
+                        <p class="card-text mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas quis eleifend elit, eu scelerisque ligula. Aenean vestibulum vestibulum augue, sed tempor mauris pretium id. Nunc ut dui neque. Quisque accumsan sodales aliquam. Fusce sit amet lectus enim. Ut venenatis risus vel ultrices aliquet</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-4">
+                <div class="card book-card flex-fill" style="height: 800px; overflow: hidden;">
+                    <h5 class="card-title mb-0">Product 2</h5>
+                    <!-- Background Image Section -->
+                    <figure class="card-image" style="background-image: url(img/banana); background-size: cover; background-position: center; height: 80%; position: relative; margin: 0px 24px;">
+                        <figcaption>Product 2</figcaption>
+                    </figure>
+                    <!-- Button Section -->
+                    <div class="card-footer d-flex justify-content-center align-items-center" style="height: 20%;">
+                        <p class="card-text mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas quis eleifend elit, eu scelerisque ligula. Aenean vestibulum vestibulum augue, sed tempor mauris pretium id. Nunc ut dui neque. Quisque accumsan sodales aliquam. Fusce sit amet lectus enim. Ut venenatis risus vel ultrices aliquet</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-4">
+                <div class="card book-card flex-fill" style="height: 800px; overflow: hidden;">
+                    <h5 class="card-title mb-0">Product 3</h5>
+                    <!-- Background Image Section -->
+                    <figure class="card-image" style="background-image: url(img/banana); background-size: cover; background-position: center; height: 80%; position: relative; margin: 0px 24px;">
+                        <figcaption>Product 3</figcaption>
+                    </figure>
+                    <!-- Button Section -->
+                    <div class="card-footer d-flex justify-content-center align-items-center" style="height: 20%;">
+                        <p class="card-text mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas quis eleifend elit, eu scelerisque ligula. Aenean vestibulum vestibulum augue, sed tempor mauris pretium id. Nunc ut dui neque. Quisque accumsan sodales aliquam. Fusce sit amet lectus enim. Ut venenatis risus vel ultrices aliquet</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
