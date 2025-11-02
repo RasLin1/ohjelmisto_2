@@ -1,0 +1,4 @@
+Stats aina näkyviin
+Kartalle oma ruutu/container
+End game screen
+Load game option alussa
