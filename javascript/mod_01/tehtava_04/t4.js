@@ -1,16 +1,7 @@
+const printArea = document.getElementById("printArea")
 const name = prompt('Please enter your name: ')
-const house_number = Math.floor(Math.random() * 5) + 1;
+const house_number = Math.floor(Math.random() * 4) + 1;
+const houses = ["Gryffindor", "Slytherin", "Hufflepuff", "Ravenclaw"]
 
-if (house_number === 1) {
-    document.getElementById('print_area').innerHTML = name + ' you are a Gryffindor'
-}
-else if (house_number === 2) {
-    document.getElementById('print_area').innerHTML = name + 'you are a Slytherin'
-}
-else if (house_number === 3) {
-    document.getElementById('print_area').innerHTML = name + 'you are a Hufflepuff'
-}
-else if (house_number === 4) {
-    document.getElementById('print_area').innerHTML = name + 'you are a Ravenclaw'
-}
+printArea.innerHTML = `${name} you are a ${houses[house_number - 1]}`
 
