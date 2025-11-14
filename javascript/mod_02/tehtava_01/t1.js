@@ -15,8 +15,11 @@ for (let i = 0; i < 5; i++) {
     nums.push(prompt("Please enter a number: "));
 }
 
-nums = arrayReverser(nums)
+nums = arrayReverser(nums);
 
 for (let i = 0; i < nums.length; i++) {
-    ul.insertAdjacentElement('beforeend', `<li>${nums[i]}</li>`);
+    const li = document.createElement("li");
+    li.innerText = nums[i];
+    ul.insertAdjacentElement('beforeend', li);
+    console.log(nums[i]);
 }
