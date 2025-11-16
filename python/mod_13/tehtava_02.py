@@ -22,6 +22,7 @@ def search_airport():
         cursor = db.cursor(dictionary=True)
         cursor.execute(query, (icao,))
         query_return = cursor.fetchone()
+        print(query_return)
         response = {
             "ICAO": icao,
             "Name": query_return.name,
