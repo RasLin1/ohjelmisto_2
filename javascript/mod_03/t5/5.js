@@ -92,4 +92,13 @@ const picArray = [
   },
 ];
 
+const target = document.getElementById('pictures');
+
+for (let i = 0; i < names.length; i++) {
+    const article = document.createElement("article");
+    article.classList.add('card');
+    target.insertAdjacentElement('beforeend', article);
+    
+}
+
 // add your code here
