@@ -1,18 +1,22 @@
  'use strict';
 
-const div = document.getElementById('mainContainer');
+const ul = document.getElementById('printList');
 let allowNewNums = true;
-const personArray =  ['Petrus', 'Matteus', 'Bartolomaios', 'Simon'];
+let numberArray = [1, 2, 3, 4, 5, 6];
 
-function concat(array) {
-    let nameString = '';
-    for (let x of array) {
-        nameString += x;
+function evenNumSeparator(numbers) {
+    let evenNumbers = [];
+    for (let x of numbers) {
+        if (x % 2 == 0) {
+            evenNumbers.push(x)
+        }
     }
-    return nameString
+    return evenNumbers
 }
 
-const concatArray =  concat(personArray);
-const span = document.createElement('span');
-span.innerText = concatArray;
-div.appendChild(span);
+const evenNumbers = evenNumSeparator(numberArray);
+for (let i = 0; i < evenNumbers.length; i++) {
+    const li = document.createElement("li");
+    li.innerText = evenNumbers[i];
+    ul.appendChild(li);
+}
