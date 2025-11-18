@@ -5,8 +5,6 @@ from flask import Flask, request, jsonify
 app = Flask(__name__)
 @app.route("/airport")
 
-
-
 def search_airport():
     db = mysql.connector.connect(
     host="127.0.0.1",
@@ -15,18 +13,17 @@ def search_airport():
     user="root",
     password=""
     )
-    query = f"SELECT name, municipality FROM airport WHERE ident = %s"
+    query = f"SELECT ident, name, municipality FROM airport WHERE ident = %s"
     try:
         args = request.args
         icao = str(args.get("icao"))
         cursor = db.cursor(dictionary=True)
         cursor.execute(query, (icao,))
         query_return = cursor.fetchone()
-        print(query_return)
         response = {
-            "ICAO": icao,
-            "Name": query_return.name,
-            "Municipality": query_return.municipality
+            "ICAO": query_return["ident"],
+            "Name": query_return["name"],
+            "Municipality": query_return["municipality"]
         }
     except ValueError:
         response = {
@@ -37,7 +34,7 @@ def search_airport():
 @app.errorhandler(404)
 def page_not_found(virhe):
     response = {
-        "result": virhe.result
+        "result": virhe
     }
     return jsonify(response)
 
