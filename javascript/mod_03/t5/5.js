@@ -94,11 +94,33 @@ const picArray = [
 
 const target = document.getElementById('pictures');
 
-for (let i = 0; i < names.length; i++) {
-    const article = document.createElement("article");
-    article.classList.add('card');
-    target.insertAdjacentElement('beforeend', article);
-    
+for (let x of picArray) {
+  console.log(x);    // log the result to the console
+  const h2 = document.createElement('h2');
+    h2.textContent = x.title;
+
+  const fig = document.createElement('figure'); 
+
+  const img = document.createElement('img');
+  if (!x.image) {
+    x.image = {medium: 'https://placecats.com/210/295'}
+  }
+    img.src = x.image?.medium;
+    img.alt = x.title;
+  
+  const figCap = document.createElement('figcaption');
+    figCap.textContent = x.caption;
+  
+  fig.append(img, figCap);
+
+  const description = document.createElement('p');
+    description.innerText = x.description;
+
+  const article = document.createElement('article');
+  article.classList.add('card');
+  article.append(h2, fig, description);
+
+  target.append(article);
 }
 
 // add your code here
